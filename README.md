@@ -7,3 +7,5 @@ Profesor: Juan Pablo González
 
 ## TP2
 [Código](https://github.com/LCaravaggio/Impacto/tree/main/TP2)
+[Documento](https://github.com/LCaravaggio/Impacto/blob/main/TP2/Evaluaci%C3%B3n_de_Impacto___TP2.pdf)
+
