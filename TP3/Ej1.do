@@ -4,7 +4,7 @@
 
 
 * Start Code
-cd "C:\Users\lcaravaggio_mecon\Desktop\Evaluación de Impacto\TP3"
+cd "C:\Users\PC\Desktop\Impacto\TP3"
 pause off
 clear all
 set more off
@@ -95,4 +95,18 @@ esttab matrix(B) using "D.tex", replace title(Regresiones Instrumentales sin Con
 
 
 * Reduced form
-reg `baseline_controls' `colonial_controls' ln_init_pop_density ln_export_area=distsea, cluster(district)
+matrix B = J(5,2,.)
+local i = 1
+foreach d in trust_relatives trust_neighbors intra_group_trust inter_group_trust trust_local_council {
+    reg `d' `baseline_controls' `colonial_controls' ln_init_pop_density distsea , robust cluster(district)
+    local coefA=e(b)[1,1]
+    local coefB=e(b)[1,2]
+
+    matrix B[`i',1] = (`coefA', `coefB')
+    local i = `i' + 1
+}
+
+matrix rownames B = trust_relatives trust_neighbors intra_group_trust inter_group_trust trust_local_council
+matrix colnames B = ln_init_pop_density distsea
+esttab matrix(B) using "E.tex", replace title(Regresiones lineales) postfoot("\tabnotes{3}{Nota: Se presentan los coeficientes de la estimación lineal entre las variables seleccionadas y el tratamiento.}\label{E}") nomtitles
+

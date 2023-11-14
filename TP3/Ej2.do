@@ -2,9 +2,11 @@
 * net install rdrobust, from(https://raw.githubusercontent.com/rdpackages/rdrobust/master/stata) replace
 * net install rdlocrand, from(https://raw.githubusercontent.com/rdpackages/rdlocrand/master/stata) replace
 * net install lpdensity, from(https://raw.githubusercontent.com/nppackages/lpdensity/master/stata) replace
+* ssc install rddensity
+* ssc install coefplot
 
 * Start Code
-cd "C:\Users\lcaravaggio_mecon\Desktop\Evaluación de Impacto\TP3"
+cd "C:\Users\PC\Desktop\Impacto\TP3"
 pause off
 clear all
 set more off
@@ -84,7 +86,7 @@ coefplot (Reg1, mlcolor(black) mfcolor(black)) ///
 	(Reg18, mlcolor(black) mfcolor(black)) /// 
 	(Reg19, mlcolor(black) mfcolor(black)) /// 
 	(Reg20, mlcolor(black) mfcolor(black)) /// 
-	, yline(0) vertical legend(off) ciopts(recast(rcap) color(black)) 
+	, yline(0) vertical legend(off) ciopts(recast(rcap) color(black)) graphregion(color(white))
 graph export "Graph5.png", as(png) replace
 
 
