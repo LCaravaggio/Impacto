@@ -1,16 +1,17 @@
 \begin{table}[htbp]\centering
-\caption{Variables Instrumentales - Grupo Étnico}
+\caption{Regresiones Instrumentales - Grupo Étnico}
 \begin{tabular}{l*{3}{c}}
 \hline\hline
-            &       Coeff&     Std\_Err&           F\\
+            &ln\_export\_area&ln\_init\_pop\_density&        KP\_F\\
 \hline
-ln\_export\_area&    .1501215&    .0086228&     11.2088\\
-trust\_neighbors&     .441726&    .0005216&           .\\
-intra\_group\_trust&    .2241798&    .0001674&           .\\
-inter\_group\_trust&   -.0252214&   -.0003578&           .\\
-trust\_local\_council&    .0240671&    .0000473&           .\\
-age         &   -.0065535&    .0000326&           .\\
-age2        &    .0000736&   -1.81e-07&           .\\
-urban\_dum   &   -.0045852&    .0002094&           .\\
-urban\_dum   &   -.0262676&   -.0007581&           .\\
-\tabnotes{4}{Nota: Se presenta el coeficiente y el Desvío Estándar de la regresión con vaiables instrumentales con errores estándar robustos y clusteriados a nivel de grupo étnico y el estadístico F de la first stage en la tercera columna.}\label{C}
+trust\_relatives&   -.0998835&   -.0460691&    11.23326\\
+R.S.E.      &    .1048564&    .0285036&           .\\
+trust\_neighbors&   -.1775261&   -.0039939&    11.18456\\
+R.S.E.      &     .117386&    .0325887&           .\\
+intra\_group\_trust&   -.2322123&    .0088827&    11.18083\\
+R.S.E.      &    .1196355&    .0376776&           .\\
+inter\_group\_trust&   -.0686271&   -.0415706&    11.14317\\
+R.S.E.      &    .1040159&    .0292683&           .\\
+trust\_local\_council&    -.355391&    .0226054&    11.22766\\
+R.S.E.      &    .1589381&    .0474609&           .\\
+\tabnotes{3}{Nota: Se presentan los coeficientes de las regresiones instrumentales clusterizadas a nivel de grupo étnico.}\label{C}

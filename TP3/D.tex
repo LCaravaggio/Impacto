@@ -1,10 +1,17 @@
 \begin{table}[htbp]\centering
-\caption{Variables Instrumentales - Sin Controles}
-\begin{tabular}{l*{1}{c}}
+\caption{Regresiones Instrumentales sin Controles}
+\begin{tabular}{l*{3}{c}}
 \hline\hline
-            &ln\_export\_area\\
+            &ln\_export\_area&ln\_init\_pop\_density&        KP\_F\\
 \hline
-Coeff       &    .0297451\\
-Std\_Err     &    .0004719\\
-F           &    207.0467\\
-\tabnotes{2}{Nota: Se presenta el coeficiente y el Desvío Estándar de la regresión con vaiables instrumentales con errores estándar robustos y clusteriados a nivel de distrito sin controles y el estadístico F de la first stage en la tercera columna.}\label{D}
+trust\_relatives&   -.0998835&   -.0460691&    202.3524\\
+R.S.E.      &    .0475199&    .0162344&           .\\
+trust\_neighbors&   -.1775261&   -.0039939&    201.6459\\
+R.S.E.      &    .0623044&    .0212049&           .\\
+intra\_group\_trust&   -.2322123&    .0088827&    201.3151\\
+R.S.E.      &     .056466&    .0205693&           .\\
+inter\_group\_trust&   -.0686271&   -.0415706&    200.6347\\
+R.S.E.      &    .0487715&     .016986&           .\\
+trust\_local\_council&    -.355391&    .0226054&    204.6662\\
+R.S.E.      &    .0543039&    .0181299&           .\\
+\tabnotes{3}{Nota: Se presentan los coeficientes de las regresiones instrumentales clusterizadas a nivel de distrito pero sin controles.}\label{D}
